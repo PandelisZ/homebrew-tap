@@ -20,8 +20,24 @@ cask "codex-remote" do
     "~/Library/Preferences/io.codexremote.app.plist",
   ]
 
+  # This build is ad-hoc signed, not notarised. Gatekeeper reads that combination plus the
+  # quarantine flag as "damaged and can't be opened" — a different error from "unidentified
+  # developer", and one that right-click -> Open does NOT clear. Stripping the flag is the
+  # only thing that makes an ad-hoc build launch.
+  #
+  # You are trading Gatekeeper's check for trust in this tap and in the checksum above, so
+  # the caveat says so rather than quietly doing it.
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/CodexRemote.app"],
+                   sudo: false
+  end
+
   caveats <<~EOS
-    Codex Remote is ad-hoc signed rather than notarised, so the first launch needs
-    right-click -> Open. It runs in the menu bar and has no Dock icon.
+    This build is ad-hoc signed rather than notarised, so macOS would otherwise refuse to
+    open it ("CodexRemote is damaged"). The cask removes the quarantine flag on install,
+    which means you are trusting this tap and the checksum rather than Apple's notary.
+
+    Codex Remote runs in the menu bar and has no Dock icon.
   EOS
 end
