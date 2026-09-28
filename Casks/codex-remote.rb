@@ -1,6 +1,6 @@
 cask "codex-remote" do
-  version "0.5.1"
-  sha256 "f2b5ac7e8bc65eae74ccf50e0ad8f30dec3dcff8cdfa29258cd35d977f9eb649"
+  version "0.5.2"
+  sha256 "582e584cdcc116f802097c1b0e8f1e8ded17eb39ba58a854ae059c32052e0fa1"
 
   url "https://github.com/PandelisZ/codex-remote/releases/download/v#{version}/CodexRemote-#{version}.zip",
       verified: "github.com/PandelisZ/codex-remote/"
