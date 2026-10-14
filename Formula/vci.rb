@@ -6,29 +6,29 @@ class Vci < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/PandelisZ/cryptographically-verifiable-ci-runner/releases/download/v1.1.0/vci-aarch64-apple-darwin.tar.gz"
-      sha256 "ef52d9e0b3d6d4fc423eff1e822fe60820cbd308c9ec281461e4338f6bf018b2"
+      url "https://github.com/PandelisZ/cryptographically-verifiable-ci-runner/releases/download/v1/vci-aarch64-apple-darwin.tar.gz"
+      sha256 "100f5c7f7ed206bb235532f0e3fcef9fb99f5d0f5e5f8baea4cbbedacea51d5b"
     end
     on_intel do
-      url "https://github.com/PandelisZ/cryptographically-verifiable-ci-runner/releases/download/v1.1.0/vci-x86_64-apple-darwin.tar.gz"
-      sha256 "a1c65d65d6a339166dc128a5612a823bda72d3af1a82f40a419f8e3f0bb874bc"
+      url "https://github.com/PandelisZ/cryptographically-verifiable-ci-runner/releases/download/v1/vci-x86_64-apple-darwin.tar.gz"
+      sha256 "2ee1e59f444ac95e8d4df600723f77b214f9378649c08ba2835e28318b96b162"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/PandelisZ/cryptographically-verifiable-ci-runner/releases/download/v1.1.0/vci-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "bde8e78f52918e84a76aaaf9862e4f4bbe8d0ad8e647ee145278e4f6a6d2c3e3"
+      url "https://github.com/PandelisZ/cryptographically-verifiable-ci-runner/releases/download/v1/vci-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "d335bac4de712896ef2d4b3ed89243d3d6d10f58337ea14de92d954ac16e874f"
     end
     on_intel do
-      url "https://github.com/PandelisZ/cryptographically-verifiable-ci-runner/releases/download/v1.1.0/vci-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "5f4da01424beafed3247945ca15542ee4f31873116471a3fcccdd7d6be8c2e6d"
+      url "https://github.com/PandelisZ/cryptographically-verifiable-ci-runner/releases/download/v1/vci-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "2e7ad1fee41f71f0ae2f9f5e681938e20e29d40d60b1302496a0fda5e077cc2c"
     end
   end
 
   resource "collectors" do
-    url "https://github.com/PandelisZ/cryptographically-verifiable-ci-runner/archive/refs/tags/v1.1.0.tar.gz"
-    sha256 "7e428509d1613da86f63aceaa6d12c43675484286db34930edfdefbdf561866e"
+    url "https://github.com/PandelisZ/cryptographically-verifiable-ci-runner/archive/refs/tags/v1.tar.gz"
+    sha256 "412608f63ca52972efa5e02b95d4219001aa7a223fd8326b04fde44f5574b16c"
   end
 
   def install
