@@ -4,33 +4,33 @@ class Vci < Formula
   homepage "https://pandelisz.github.io/cryptographically-verifiable-ci-runner/"
   license "MIT"
   # Homebrew cannot read the version from URLs inside on_macos/on_linux blocks.
-  version "2.1.10"
+  version "2.1.11"
 
   on_macos do
     on_arm do
-      url "https://github.com/PandelisZ/cryptographically-verifiable-ci-runner/releases/download/v2.1.10/vci-aarch64-apple-darwin.tar.gz"
-      sha256 "30b97814fdc28c359cb93798abe95e66ff51931677d7986dd43be56ce50f74d0"
+      url "https://github.com/PandelisZ/cryptographically-verifiable-ci-runner/releases/download/v2.1.11/vci-aarch64-apple-darwin.tar.gz"
+      sha256 "7a84228037bf172ec63941f6a294de0ba58aaf945359cc0d03ac7414c818382e"
     end
     on_intel do
-      url "https://github.com/PandelisZ/cryptographically-verifiable-ci-runner/releases/download/v2.1.10/vci-x86_64-apple-darwin.tar.gz"
-      sha256 "bd88066083aa5899f3b7ce6189738d977ead9f0fa9670ee60dae7713c51e8ae2"
+      url "https://github.com/PandelisZ/cryptographically-verifiable-ci-runner/releases/download/v2.1.11/vci-x86_64-apple-darwin.tar.gz"
+      sha256 "5b8e123d7730d8f49a3897a9ced8089b25360c73220664713a65b044921cb5c5"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/PandelisZ/cryptographically-verifiable-ci-runner/releases/download/v2.1.10/vci-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "2b8c85e6ef7904c1f8bf6035734ed8748a542b8709e666ebbbf832741eeedbad"
+      url "https://github.com/PandelisZ/cryptographically-verifiable-ci-runner/releases/download/v2.1.11/vci-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "969ab9a43c17cdc817adac8e65f3fc8f8f7c4f2b944a6f529002ab15e2f51d6a"
     end
     on_intel do
-      url "https://github.com/PandelisZ/cryptographically-verifiable-ci-runner/releases/download/v2.1.10/vci-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "9e228570e8cb50cecd88f241d578deb0f23bb2e24835a8abbda59ecc5fda2f90"
+      url "https://github.com/PandelisZ/cryptographically-verifiable-ci-runner/releases/download/v2.1.11/vci-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "f323c081038b3613d6d685156de6b8cf356675d6adb61412ae5ec7057ca45b36"
     end
   end
 
   resource "collectors" do
-    url "https://github.com/PandelisZ/cryptographically-verifiable-ci-runner/archive/refs/tags/v2.1.10.tar.gz"
-    sha256 "52fad2d7ff37f49b062a4d0b1ba9b6cb6e9f4011ce5e109006e4c287b33da143"
+    url "https://github.com/PandelisZ/cryptographically-verifiable-ci-runner/archive/refs/tags/v2.1.11.tar.gz"
+    sha256 "2a3b9b28678f4562dd6a81691adad1ec9bc19de18b06ba9f73713832e64ea655"
   end
 
   def install
